@@ -14,20 +14,45 @@ Helper classes for easier mocking and patching tests.
 Sample
 ======
 
+-----------
+With Mockie
+-----------
+
+
 .. code-block:: python
 
    from mockie import TestCase
-   from my import module
+   from mymodule import clean
 
    class MyTest(TestCase):
 
-       def setUp(self):
-           self.mock_shutil = self.patch("my.module.shutil")
+       def test_my_function_with_side_effects(self):
+           dir_path = "/path/to/dir/"
+           self.patch("package.db.database.os")
+           mock_shutil = self.patch("package.db.database.shutil")
+
+           clean()
+           self.assertCalledOnceWith(self.mock_shutil.rmtree, dir_path)
+
+
+--------------
+Without Mockie
+--------------
+
+.. code-block:: python
+
+   from mockie import TestCase
+   from mymodule import clean
+
+   class MyTest(TestCase):
 
        def test_my_function_with_side_effects(self):
-           module.function()
-           self.mock_shutil.rmtree.assert_called_once_with("my_file.txt")
-
+           dir_path = "/path/to/dir/"
+           dbfile = "database.db"
+           with patch("package.db.database.os"):
+               with patch("package.db.database.shutil") as mock_shutil:
+                   clean()
+                   mock_shutil.rmtree.assert_called_once_with(dir_path)
 
 ===
 API
