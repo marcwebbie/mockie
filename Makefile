@@ -2,7 +2,7 @@ PACKAGE = "mockie"
 PACKAGE_TESTS = "tests"
 
 
-.PHONY: clean coverage test
+.PHONY: clean coverage test dist register deploy
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -41,6 +41,10 @@ dist:
 
 register:
 	python setup.py register
+
+deploy:
+	pip install wheel
+	python setup.py sdist bdist_wheel upload -r pypi
 
 check:
 	flake8 $(PACKAGE) $(PACKAGE_TESTS)
