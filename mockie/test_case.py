@@ -1,18 +1,18 @@
-from unittest import TestCase
+import unittest
 try:
     from unittest.mock import Mock, patch, mock_open, MagicMock
 except ImportError:
     from mock import Mock, patch, mock_open, MagicMock
 
 
-class TestCase(TestCase):
+class TestCase(unittest.TestCase):
 
     def __init__(self, *args, **kwargs):
         self.mock_open = mock_open
         self.Mock = Mock
         self.MagicMock = MagicMock
 
-        super().__init__(*args, **kwargs)
+        super(TestCase, self).__init__(*args, **kwargs)
 
     def patch(self, *args, **kwargs):
         patcher = patch(*args, **kwargs)
