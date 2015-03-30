@@ -6,7 +6,7 @@ Helper classes for easier mocking and patching tests.
 
 -----
 
-|pypi| |unix_build|
+|pypi| |unix_build| |coverage|
 
 -----
 
@@ -90,6 +90,3 @@ SOFTWARE.
 .. |unix_build| image:: https://img.shields.io/travis/marcwebbie/mockie/master.svg?style=flat-square&label=unix%20build
     :target: http://travis-ci.org/marcwebbie/mockie
     :alt: Build status of the master branch on Mac/Linux
-
-.. role:: python(code)
-   :language: python
