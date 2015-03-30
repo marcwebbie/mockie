@@ -10,9 +10,9 @@ Helper classes for easier mocking and patching tests.
 
 -----
 
-========
+======
 Sample
-========
+======
 
 .. code-block:: python
 
@@ -37,19 +37,19 @@ API
 TestCase
 --------
 
-+ :python:`self.Mock`
-+ :python:`self.MagicMock`
-+ :python:`self.patch`
-+ :python:`self.patch_object`
-+ :python:`self.patch_multiple`
-+ :python:`self.patch_dict`
-+ :python:`self.mock_open`
-+ :python:`self.assertCalled`
-+ :python:`self.assertCalledOnceWith`
-+ :python:`self.assertAnyCall`
-+ :python:`self.assertIsMocked`
-+ :python:`self.assertIsMock`
-+ :python:`self.assertIsMagicMock`
++ ``self.Mock``
++ ``self.MagicMock``
++ ``self.patch``
++ ``self.patch_object``
++ ``self.patch_multiple``
++ ``self.patch_dict``
++ ``self.mock_open``
++ ``self.assertCalled``
++ ``self.assertCalledOnceWith``
++ ``self.assertAnyCall``
++ ``self.assertIsMocked``
++ ``self.assertIsMock``
++ ``self.assertIsMagicMock``
 
 
 =============
