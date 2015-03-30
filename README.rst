@@ -11,7 +11,7 @@ Helper classes for easier mocking and patching tests.
 -----
 
 ========
-TestCase
+Sample
 ========
 
 .. code-block:: python
@@ -37,19 +37,19 @@ API
 TestCase
 --------
 
-+ self.Mock
-+ self.MagicMock
-+ self.patch
-+ self.patch_object
-+ self.patch_multiple
-+ self.patch_dict
-+ self.mock_open
-+ self.assertCalled
-+ self.assertCalledOnceWith
-+ self.assertAnyCall
-+ self.assertIsMocked
-+ self.assertIsMock
-+ self.assertIsMagicMock
++ :python:`self.Mock`
++ :python:`self.MagicMock`
++ :python:`self.patch`
++ :python:`self.patch_object`
++ :python:`self.patch_multiple`
++ :python:`self.patch_dict`
++ :python:`self.mock_open`
++ :python:`self.assertCalled`
++ :python:`self.assertCalledOnceWith`
++ :python:`self.assertAnyCall`
++ :python:`self.assertIsMocked`
++ :python:`self.assertIsMock`
++ :python:`self.assertIsMagicMock`
 
 
 =============
@@ -58,7 +58,7 @@ License (MIT)
 
 The MIT License (MIT)
 
-Copyright (c) 2015 marcwebbie
+Copyright (c) 2015 `marcwebbie <https://github.com/marcwebbie>`_.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -90,3 +90,6 @@ SOFTWARE.
 .. |unix_build| image:: https://img.shields.io/travis/marcwebbie/mockie/master.svg?style=flat-square&label=unix%20build
     :target: http://travis-ci.org/marcwebbie/mockie
     :alt: Build status of the master branch on Mac/Linux
+
+.. role:: python(code)
+   :language: python
